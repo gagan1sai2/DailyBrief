@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 🌐 Internet permission (required for APIs, maps, and news) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 📍 Location permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 🗺️ Optional: storage for map caching -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+
+        <!-- ✅ osmdroid support (optional library for maps) -->
+        <uses-library
+            android:name="org.osmdroid"
+            android:required="false" />
+
+        <!-- 🟢 Login Screen (Launcher) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 🟢 Main Dashboard -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Dashboard" />
+
+        <!-- 🟢 Nearby Places (OpenStreetMap / Google Maps) -->
+        <activity
+            android:name=".PlacesActivity"
+            android:exported="true"
+            android:label="Nearby Places" />
+
+        <!-- 🗺️ Map View for Stations, ATMs, and Restaurants -->
+        <activity
+            android:name=".MapActivity"
+            android:exported="true"
+            android:label="Map View" />
+
+        <!-- 📰 All News (displays 10 news articles) -->
+        <activity
+            android:name=".AllNewsActivity"
+            android:exported="true"
+            android:label="All News" />
+
+        <!-- 🌦️ All Weather (detailed weather info) -->
+        <activity
+            android:name=".AllWeatherActivity"
+            android:exported="true"
+            android:label="All Weather" />
+
+        <!-- 🌍 In-App WebView (opens full article inside app) -->
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="true"
+            android:label="News Detail"
+            android:parentActivityName=".AllNewsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AllNewsActivity" />
+        </activity>
+
+    </application>
+
+</manifest>

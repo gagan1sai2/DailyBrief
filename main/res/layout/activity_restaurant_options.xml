@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#EFECE3">
+
+    <!-- Option Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/rounded_card_blue"
+        android:padding="24dp"
+        android:elevation="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Restaurant Type"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/vegBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🥗 Veg Restaurants"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#4A70A9"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="12dp"
+            android:paddingVertical="10dp" />
+
+        <Button
+            android:id="@+id/nonVegBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🍗 Non-Veg Restaurants"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#4A70A9"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:paddingVertical="10dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,6 +1,6 @@
 # 🌦️ DailyBrief — Smart Weather, News & Nearby Finder App
-<img src="IMG_2286.PNG" alt="dailybrief" height="600" />
 <img src="IMG_2287.PNG" alt="dailybrief" height="600" />
+<img src="IMG_2286.PNG" alt="dailybrief" height="600" />
 
 **DailyBrief** is a modern Android application built in **Java** that gives you a quick daily snapshot of your world — combining **live weather updates**, **top news**, and **nearby search utilities** like ATMs, restaurants, and transport stations — all in one elegant interface.
 
